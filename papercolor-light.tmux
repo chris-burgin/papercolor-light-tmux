@@ -8,11 +8,10 @@ main() {
     navy='#005f87'
     aqua='#0087af'
 
-    # Icons
-    left_sep=''
-    right_sep=''
-    left_sep_thin=''
-    right_sep_thin=''
+    left_sep=''
+    right_sep=''
+    left_sep_thin=''
+    right_sep_thin=''
 
     tmux set-option -g status on
     tmux set-option -g status-left-length 100
@@ -25,7 +24,7 @@ main() {
     tmux set-option -g message-style "fg=${white},bg=${aqua}"
     tmux set-option -g message-command-style "fg=${white},bg=${aqua}"
     tmux set-option -g status-left "#[bg=${white},fg=${darkgray}] #S #[bg=${navy},fg=${white}]${right_sep}"
-    tmux set-option -g status-right "#[bg=${navy},fg=${aqua}]${left_sep}#[bg=${aqua},fg=${white}] %H:%M ${right_sep_thin} %m/%d/%Y #[bg=${aqua},fg=${white}]${left_sep}#[bg=${white},fg=${darkgray}] #h "
+    tmux set-option -g status-right "#[bg=${navy},fg=${aqua}]${left_sep}#[bg=${aqua},fg=${white}]"
     tmux set-window-option -g window-status-format "#[bg=${navy},fg=${white}] #I ${left_sep_thin}#[bg=${navy},fg=${white}] #W #F "
     tmux set-window-option -g window-status-current-format "#[bg=${aqua},fg=${navy},bold]${right_sep}#[bg=${aqua},fg=${white}] #I ${left_sep_thin}#[bg=${aqua},fg=${white}] #W #F #[bg=${navy},fg=${aqua},bold]${right_sep}"
 }
